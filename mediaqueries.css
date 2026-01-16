@@ -1,0 +1,67 @@
+@media screen and (max-width:1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
+    align-items: center;
+  }
+
+  .contact-form button {
+    width: 70%;
+  }
+}
+
+
+/* ================== RESPONSIVE DESIGN ================== */
+@media screen and (max-width: 768px) {
+    #certifications {
+        padding: 3rem 1rem;
+    }
+
+    #certifications .title {
+        font-size: 1.6rem;
+    }
+
+    .certifications-container a.details-container {
+        flex: 1 1 45%;       /* two cards per row on tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certifications-container a.details-container {
+        flex: 1 1 100%;      /* single card per row on mobile */
+    }
+
+    #certifications .title {
+        font-size: 1.4rem;
+    }
+
+    #certifications .section__text__p1 {
+        font-size: 0.9rem;
+    }
+}

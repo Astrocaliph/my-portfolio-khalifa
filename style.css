@@ -471,59 +471,51 @@ article .icon {
 }
 
 /* =====================
-   CERTIFICATIONS
+   CERTIFICATE BACKGROUND CARDS
 ===================== */
-#certifications {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
-}
 
 .certifications-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  justify-content: center;
   margin-top: 2rem;
 }
 
-.certifications-container a.details-container {
+.certificate-card {
+  height: 220px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  flex: 1 1 220px;
-  max-width: 250px;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 1.5rem;
-  border: 0.1rem solid rgb(163,163,163);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.certificate-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  justify-content: flex-end;
+  padding: 1rem;
+  color: white;
 }
 
-.certifications-container a.details-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.certifications-container .details-container .icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.7rem;
-}
-
-.certifications-container .details-container h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-
-.certifications-container .details-container p {
-  font-size: 0.85rem;
-  color: rgb(85,85,85);
+.certificate-overlay h3 {
   margin: 0;
+  font-size: 1.1rem;
+}
+
+.certificate-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 /* =====================
